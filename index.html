@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple gallery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="assets/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascripts/jquery-ui.min.js" ></script>
+<script type="text/javascript" src="assets/javascripts/jquery.filedrop.js" ></script>
+<script type="text/javascript" src="assets/javascripts/jquery.tagit.custom.js"></script>
+<script type="text/javascript" src="assets/javascripts/script.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/jquery.tagit.css">
+<link rel="stylesheet" type="text/css" href="assets/stylesheets/style.css">
+</head>
+
+<body>
+<div id="container">
+  <div id="message"></div>
+  <a href="#" id="picture_btn" class="button">Pictures</a>
+  <a href="#" id="login_btn" class="button login">Login</a>
+  <a href="#" id="upload_btn" class="button can_upload">Upload</a>
+  <a href="#" id="logout_btn" class="button can_upload">Logout</a>
+  
+  <div class="headline if_picture"></div>
+  <div class="box">
+    <div id="login" class="hide">
+      <form method="post" id="login_form">
+          <input type="hidden" name="action" value="login">
+          <input type="input" name="name" placeholder="Your name..." class="clear"><br>
+          <input type="password" name="password" placeholder="Your password..." class="clear"><br>
+          <input type="submit" value="Login!">
+      </form>
+    </div>
+    <div id="picture">
+      <div class="arrow previous"></div>
+      <div class="arrow next"></div>
+
+      <img id="picture_tag" height="320">
+    </div>
+    <div id="upload" class="hide">
+      <span class="message">Drop images here to upload.</span>
+    </div>
+  </div>
+  <div class="tags can_upload if_picture">
+    <form method="post" id="tag_form">
+      <input type="text" id="tags" name="tags">
+    </form>
+  </div>
+  
+  
+</div>
+<div class="related if_picture"></div>
+</body>
+
+</html>
